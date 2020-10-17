@@ -4,6 +4,7 @@
 //  a moment function
 // a color function
 
+
 var saveBtn = $("<button>");
 
 // an hour function 
@@ -11,11 +12,11 @@ var saveBtn = $("<button>");
 // console.log(currentTime); 
 
 
-//   var hour = $(this).val();
-//     console.log(hour);
+  // var hour = $(this).val();
+  //   console.log(hour);
 
-//     var row = $(".row");
-//      console.log(row)
+  //   var row = $(".row");
+  //    console.log(row)
 
      $(".saveBtn").on("click", function () {
 
@@ -38,7 +39,7 @@ var time = $(this).parent().attr("id");
   // The .each() method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.
 
 // need to be wrapped up into a updaterFunction
-$(".saveBtn").ready( function () {
+$(".time-block").updater( function () {
   var currentTime = moment().hours();
 
   $(".time-block").each(function () {
@@ -107,6 +108,5 @@ $("#2 .text").val(localStorage.getItem("2"))
 $("#3 .text").val(localStorage.getItem("3"))
 $("#4 .text").val(localStorage.getItem("4"))
 $("#5 .text").val(localStorage.getItem("5"))
-
 
 
