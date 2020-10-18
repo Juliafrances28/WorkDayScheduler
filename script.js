@@ -33,7 +33,12 @@ var saveBtn = $("<button>");
   localStorage.setItem(time, value);
   
 
+
+// var save = JSON.parse(localStorage.getItem("saveBtn")
   
+  var save = JSON.parse(localStorage.getItem) 
+  ("saveBtn")
+
 
   // The .each() method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.
 
@@ -78,7 +83,7 @@ var saveBtn = $("<button>");
 
 // on click, hour update, and local storage 
 
-// using local storage to GET information from local storage so that when you refresh the page the stuff you put in goes back into whatever text are they were previously saved in.
+// using local storage to GET information from local storage so that when you refresh the page the stuff you put in goes back into whatever text area they were previously saved in.
 
 // localStorage.getItem(variable for hour)
 
@@ -88,7 +93,7 @@ var saveBtn = $("<button>");
 
 // .attr Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element
 
-// .text Get the combined tex t contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
+// .text Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
 
 
 // var save = JSON.parse(localStorage.getItem("saveBtn")
