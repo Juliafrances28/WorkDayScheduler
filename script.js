@@ -3,11 +3,10 @@
 //  a local storage function
 //  a moment function
 // a color function
-
+// an hour function 
 
 var saveBtn = $("<button>");
 
-// an hour function 
 
 // console.log(currentTime); 
 
@@ -25,24 +24,30 @@ var saveBtn = $("<button>");
 
 
   // The text() method sets or returns the text content of the selected elements. When this method is used to return content, it returns the text content of all matched elements (HTML markup will be removed). When this method is used to set content, it overwrites the content of ALL matched elements.
-var value = $(this).siblings(".text").val();
+  var value = $(this).siblings(".text").val();
 
-var time = $(this).parent().attr("id");
+  var time = $(this).parent().attr("id");
 
 
   //using $(This) to get the text content (i.e. using This.siblings)
   localStorage.setItem(time, value);
-  $(this).siblings(); 
+  
 
   
 
   // The .each() method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.
 
 // need to be wrapped up into a updaterFunction
-$(".time-block").updater( function () {
+// what should be in the $("")? not sure if .time-block is right? 
+
+     }); 
+
+     function updateTime() {
+
   var currentTime = moment().hours();
 
   $(".time-block").each(function () {
+
     if (hour < currentTime) {
       $(this).addClass("past");
     } else if (currentTime === hour) {
@@ -54,10 +59,14 @@ $(".time-block").updater( function () {
       $(this).removeClass("present");
       $(this).removeClass("past");
       $(this).addClass("future");
+  
+      
     }
-  });
+   
+  
+});
 
-
+};
 
 
 // use get local storage and display it in the proper text area
@@ -75,20 +84,12 @@ $(".time-block").updater( function () {
 
 // using .text to put the value on to the page in the appropriate textarea. 
 
-
-
-
-
-
-
-
-
-
 // .addClass Adds the specified class(es) to each element in the set of matched elements.
 
 // .attr Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element
 
 // .text Get the combined tex t contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
+
 
 // var save = JSON.parse(localStorage.getItem("saveBtn")
 
@@ -97,6 +98,11 @@ $(".time-block").updater( function () {
 
 
 // This is to load any saved data from localStorage
+
+
+
+
+$(document).ready( function (){ ; 
 
 $("#8 .text").val(localStorage.getItem("8"))
 $("#9 .text").val(localStorage.getItem("9"))
@@ -109,4 +115,4 @@ $("#3 .text").val(localStorage.getItem("3"))
 $("#4 .text").val(localStorage.getItem("4"))
 $("#5 .text").val(localStorage.getItem("5"))
 
-
+}); 
