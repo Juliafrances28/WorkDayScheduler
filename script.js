@@ -1,57 +1,50 @@
 
 // this file willl include the following four functions
-//  a local storage function
+//  a local storage. getitem function
 //  a moment function
-// a color function
-// an hour function 
+//  
 
 var saveBtn = $("<button>");
 
-
-// console.log(currentTime); 
-
-
-  // var hour = $(this).val();
-  //   console.log(hour);
-
-  //   var row = $(".row");
+  // var row = $(".row");
   //    console.log(row)
 
      $(".saveBtn").on("click", function () {
 
 
+     // understanding .val()
      // The .val() method is primarily used to get the values of form elements such as input, select and textarea. When called on an empty collection, it returns undefined.
 
-
-  // The text() method sets or returns the text content of the selected elements. When this method is used to return content, it returns the text content of all matched elements (HTML markup will be removed). When this method is used to set content, it overwrites the content of ALL matched elements.
   var value = $(this).siblings(".text").val();
 
   var time = $(this).parent().attr("id");
 
-
   //using $(This) to get the text content (i.e. using This.siblings)
   localStorage.setItem(time, value);
-  
-
-
-// var save = JSON.parse(localStorage.getItem("saveBtn")
   
   var save = JSON.parse(localStorage.getItem) 
   ("saveBtn")
 
-
+   // Understanding .each() 
   // The .each() method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.
-
-// need to be wrapped up into a updaterFunction
-// what should be in the $("")? not sure if .time-block is right? 
 
      }); 
 
+     // The .each function and var currentTime... need to be wrapped up into a updaterFunction 
+   
+   
      function updateTime() {
 
   var currentTime = moment().hours();
+  
 
   $(".time-block").each(function () {
+    
+    var hour = $(this).attr("id"); 
+    hour = parseInt(hour); 
+
+    console.log(hour);
+    console. log(currentTime);
 
     if (hour < currentTime) {
       $(this).addClass("past");
@@ -105,9 +98,11 @@ var saveBtn = $("<button>");
 // This is to load any saved data from localStorage
 
 
-
-
 $(document).ready( function (){ ; 
+updateTime ();
+
+   
+$("#currentDay").text(moment().format("dddd MMM D YYYY"));
 
 $("#8 .text").val(localStorage.getItem("8"))
 $("#9 .text").val(localStorage.getItem("9"))
