@@ -1,42 +1,42 @@
 
-// this file willl include the following four functions
-//  a local storage. getitem function
-//  a moment function
-//  
 
 var saveBtn = $("<button>");
 
-  // var row = $(".row");
-  //    console.log(row)
 
      $(".saveBtn").on("click", function () {
 
 
-     // understanding .val()
-     // The .val() method is primarily used to get the values of form elements such as input, select and textarea. When called on an empty collection, it returns undefined.
+     // explanation found on the web for understanding. The .val() method is primarily used to get the values of form elements such as input, select and textarea. When called on an empty collection, it returns undefined.
+
+    // Here we are using $(This) to get the text content (i.e. using This.siblings) The same syntax can also be applied to this.parent to get the "id".attr from the parent row. 
+
+    // the line of code below grabs text from the TextArea tag and put both the hour selected and the text area into local storage using 
 
   var value = $(this).siblings(".text").val();
 
   var time = $(this).parent().attr("id");
 
-  //using $(This) to get the text content (i.e. using This.siblings)
+    // .setItem is a method of storage. It either passes or updates the keys name and value to to a particular storage object
+
   localStorage.setItem(time, value);
-  
+
+  // Json. parses a JSON string, constructing the JavaScript value or object described by the string. JSON.parse is used here to allow the "saveBtn" aka the button to save because it creates the value or object described by the string when using the  .getItem method. 
+
   var save = JSON.parse(localStorage.getItem) 
   ("saveBtn")
 
-   // Understanding .each() 
-  // The .each() method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.
+   //  An explanation found on the web to help understand what is happening with .each() The .each() method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.
 
      }); 
 
-     // The .each function and var currentTime... need to be wrapped up into a updaterFunction 
+     // The .each function and var currentTime... need to be wrapped up into a updaterFunction. 
    
    
      function updateTime() {
 
   var currentTime = moment().hours();
   
+  // .attr Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element
 
   $(".time-block").each(function () {
     
@@ -46,6 +46,8 @@ var saveBtn = $("<button>");
     console.log(hour);
     console. log(currentTime);
 
+   // .addClass Adds the specified class(es) to each element in the set of matched elements.
+   
     if (hour < currentTime) {
       $(this).addClass("past");
     } else if (currentTime === hour) {
@@ -61,41 +63,13 @@ var saveBtn = $("<button>");
       
     }
    
-  
+    
 });
 
-};
+     }; 
+// Here the code is loading any saved data from localStorage. It uses the method .getItem. local storage will then display it in the proper text area so that when you refresh the page the stuff you put in goes back into whatever text area they were previously saved in.
 
-
-// use get local storage and display it in the proper text area
-//$(#specific TIME ID).text(localstorage.getItem(hour))
-
-// also grab text from the TextArea tag and put both the hour selected and the text area into local storage using ->
-
-// localStorage.setItem(VARIABLE FOR HOUR, VARIABLE FOR TEXTAREA CONTENT)
-
-// on click, hour update, and local storage 
-
-// using local storage to GET information from local storage so that when you refresh the page the stuff you put in goes back into whatever text area they were previously saved in.
-
-// localStorage.getItem(variable for hour)
-
-// using .text to put the value on to the page in the appropriate textarea. 
-
-// .addClass Adds the specified class(es) to each element in the set of matched elements.
-
-// .attr Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element
-
-// .text Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
-
-
-// var save = JSON.parse(localStorage.getItem("saveBtn")
-
-// // The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string.
-
-
-
-// This is to load any saved data from localStorage
+// .text Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements and to put the value on to the page in the appropriate textarea
 
 
 $(document).ready( function (){ ; 
@@ -115,4 +89,4 @@ $("#3 .text").val(localStorage.getItem("3"))
 $("#4 .text").val(localStorage.getItem("4"))
 $("#5 .text").val(localStorage.getItem("5"))
 
-}); 
+});
