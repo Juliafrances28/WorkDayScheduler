@@ -1,46 +1,40 @@
-# lobsteroll
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler 
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+   ## Table of Contents
+     * [Email](#Email)
+     * [Username](#Username)
+     * [Description](#Description)
+     * [Instructions](#Instructions)
+     * [Usage](#Usage)
+     * [Questions](#Questions)
+     * [License](#License)
+     
+  ## Description
+  Create a calendar application where events can added, saved and update for the hour. The calendar will run using jquery and have updated html and css. 
 
-## User Story
+  ## Usage 
+  To have a calendar app that lets the user plan there day. 
 
-```
-Create a daily planner
-```
+  ## license 
+   MIT
+  ![badge](https://img.shields.io/badge/License-MIT-yellow
 
-## Acceptance Criteria
+  ## Contributed
+  It was a solo project.  
 
-<!-- what the app will do in real time -->
-When loading your app the current day will be displayed. 
+  ## Tested
+   test the application by putting it into use. Plan your week with application and you will see how useful this calendar application can be. 
 
-<!-- what the app will display  -->
-The page will show all the timeblocks for a standard business day.
+  ## Questions 
+   Please do not hesitate to reach out 
 
-<!-- color coding with css to determine different sections of the day -->
-Each timeblock should be color coded to indicate whether it is in the past, present, or future.
+  ## Username
+  juliafrances28 
 
-<!-- clickable timeblocks to enter events -->
-A user can enter an event by clicking on a timeblock.
 
-<!-- all events are saved to local storage -->
-Saving, an event is saved in local storage.
+  ## Email 
+  julia.horan28@gmail.com
 
-<!-- events will still be saved even when browser window is closed  and reopened later -->
-Saved events will persist when refreshing or closing the browser.
-```
+  ## Repo
+  https://github.com/Juliafrances28/WorkDayScheduler
 
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
