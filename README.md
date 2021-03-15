@@ -4,26 +4,18 @@
      * [Email](#Email)
      * [Username](#Username)
      * [Description](#Description)
-     * [Instructions](#Instructions)
-     * [Usage](#Usage)
      * [Questions](#Questions)
      * [License](#License)
      
   ## Description
-  Create a calendar application where events can added, saved and update for the hour. The calendar will run using jquery and have updated html and css. 
-
-  ## Usage 
-  To have a calendar app that lets the user plan there day. 
+  Need to better organize your day to day plans? A calendar application is a great way to do this. Create a calendar application where  can users can add, save and update for events for each the hour. The calendar will run using jquery and have updated html and css. 
 
   ## license 
    MIT
   ![badge](https://img.shields.io/badge/License-MIT-yellow
 
   ## Contributed
-  It was a solo project.  
-
-  ## Tested
-   test the application by putting it into use. Plan your week with application and you will see how useful this calendar application can be. 
+  It was a solo project.   
 
   ## Questions 
    Please do not hesitate to reach out 
