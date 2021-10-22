@@ -30,3 +30,6 @@
   ## Repo
   https://github.com/Juliafrances28/WorkDayScheduler
 
+  ## Deployed Link 
+  http://juliafrances28.github.io/WorkDayScheduler/
+
