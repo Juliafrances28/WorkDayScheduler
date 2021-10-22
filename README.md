@@ -4,7 +4,7 @@
      * [Email](#Email)
      * [Username](#Username)
      * [Description](#Description)
-     * [Questions](#Questions)
+     * [Contributed](#Contributed)
      * [License](#License)
      
   ## Description
