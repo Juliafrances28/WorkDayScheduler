@@ -17,13 +17,6 @@
   ## Contributed
   It was a solo project.   
 
-  ## Questions 
-   Please do not hesitate to reach out 
-
-  ## Username
-  juliafrances28 
-
-
   ## Email 
   julia.horan28@gmail.com
 
@@ -33,3 +26,4 @@
   ## Deployed Link 
   http://juliafrances28.github.io/WorkDayScheduler/
 
+<img width="1218" alt="Screen Shot 2021-10-22 at 11 16 35 AM" src="https://user-images.githubusercontent.com/67694214/138480370-b13817a3-6cf3-429d-b69a-f7805fd7b039.png">
